@@ -26,9 +26,7 @@
             document.getElementById('create-passkey').disabled = true;
             document.getElementById('get-passkey').disabled = true;
         }
-        const rp = location.hostname === 'webauthn.kinmemodoki.net'
-            ? { name: 'webauthn.kinmemodoki.net', id: 'webauthn.kinmemodoki.net' }
-            : { name: 'localhost' };
+        const rp = { name: 'passkeyapp.kinmemodoki.net', id: 'passkeyapp.kinmemodoki.net' };
         const conditionalHandler = (() => {
             let condGetAbortController;
             const waitConditionalGet = () => {
