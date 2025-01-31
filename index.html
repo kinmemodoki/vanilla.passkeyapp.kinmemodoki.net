@@ -35,7 +35,7 @@
                 return navigator.credentials.get({
                     publicKey: {
                         challenge: new Uint8Array(32),
-                        rp,
+                        'rpId': rp.id,
                         allowCredentials: []
                     },
                     signal: condGetAbortController.signal,
@@ -111,7 +111,7 @@
                             console.log('Getting assertion');
                             const publicKey = {
                                 challenge: new Uint8Array(32),
-                                rp,
+                                'rpId': rp.id,
                                 allowCredentials: []
                             };
                             const assertion = await navigator.credentials.get({ publicKey });
